@@ -14,15 +14,15 @@ let playerScore = 0;
 let computerScore = 0;
 
 function getRandomComputerResult() {
-  const options = ["Rock", "Paper", "Scissors"];
+  const options = ["Камень", "Бумага", "Ножницы"];
   const randomIndex = Math.floor(Math.random() * options.length);
   return options[randomIndex];
 }
 function hasPlayerWonTheRound(player, computer) {
   return (
-    (player === "Rock" && computer === "Scissors") ||
-    (player === "Scissors" && computer === "Paper") ||
-    (player === "Paper" && computer === "Rock")
+    (player === "Камень" && computer === "Ножницы") ||
+    (player === "Ножницы" && computer === "Бумага") ||
+    (player === "Бумага" && computer === "Камень")
   );
 }
 
