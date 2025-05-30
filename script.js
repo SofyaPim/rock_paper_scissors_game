@@ -30,12 +30,12 @@ function getRoundResults(userOption) {
   const computerResult = getRandomComputerResult();
   if (hasPlayerWonTheRound(userOption, computerResult)) {
     playerScore++;
-    return `Player wins! ${userOption} beats ${computerResult}`;
+    return `Ты выиграл! ${userOption} бьёт ${computerResult}`;
   } else if (computerResult === userOption) {
-    return `It's a tie! Both chose ${userOption}`;
+    return `Это ничья! Оба выбрали ${userOption}`;
   } else {
     computerScore++;
-    return `Computer wins! ${computerResult} beats ${userOption}`;
+    return `Я выиграл! ${computerResult} бьёт ${userOption}`;
   }
 }
 
@@ -47,8 +47,8 @@ function showResults(userOption) {
   roundResultsMsg.innerText = result; 
   if (playerScore === 3 || computerScore === 3) {   
     winnerMsgElement.innerText = `${
-      playerScore === 3 ? "Player" : "Computer"
-    } has won the game!`;
+      playerScore === 3 ? "Игрок" : "Я"
+    } выиграл!`;
     resetGameBtn.style.display = "block";
     optionsContainer.style.display = "none";
   }
