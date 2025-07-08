@@ -85,6 +85,21 @@ main{
   background-color: var(--white);
   color: var(--very-dark-blue);
 }
+details[open] {
+  animation: slide .6s ease-in;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 summary{
     color: var(--gray);
 }
